@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
-import NavigationBar from "@/components/ui/NavigationBar";
+import { ClerkProvider } from "@clerk/nextjs";
+import NavigationBar from "@/components/ui/NavigationBar/NavigationBar";
 
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/components/theme-provider";
 
 import "./globals.css";
 
@@ -21,34 +21,20 @@ export default function RootLayout({
 }>) {
   return (
     <>
-        <ClerkProvider>
-
-      
-      <html lang="en">
-        <body className={inter.className}>
-        < NavigationBar />
-        <header>
-        <SignedOut>
-        <div className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-all duration-300">
-           <SignInButton />
-        </div>
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-            </header>
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-          {children}
-        </ThemeProvider>
-
-          
+      <ClerkProvider>
+        <html lang="en">
+          <body className={inter.className}>
+            <NavigationBar />
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              {children}
+            </ThemeProvider>
           </body>
-      </html>
+        </html>
       </ClerkProvider>
     </>
   );
