@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider } from '@clerk/nextjs'
 import NavigationBar from "@/components/ui/NavigationBar/NavigationBar";
 
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/theme-provider"
 
 import "./globals.css";
 
@@ -21,20 +21,25 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <ClerkProvider>
-        <html lang="en">
-          <body className={inter.className}>
-            <NavigationBar />
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              enableSystem
-              disableTransitionOnChange
-            >
-              {children}
-            </ThemeProvider>
+        <ClerkProvider>
+
+      
+      <html lang="en">
+        <body className={inter.className}>
+        
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            < NavigationBar />
+          {children}
+        </ThemeProvider>
+
+          
           </body>
-        </html>
+      </html>
       </ClerkProvider>
     </>
   );
