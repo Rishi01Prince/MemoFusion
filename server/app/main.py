@@ -1,19 +1,13 @@
-# app/main.py
 from fastapi import FastAPI
-from app.db.mongodb import mongodb
-from app.api.endpoints import auth, team, content
+from .api.endpoints import auth, team, content
 
-app = FastAPI()
+app = FastAPI(title="Super Notes API", version="1.0.0")
 
-@app.on_event("startup")
-async def startup_db_client():
-    await mongodb.connect()
+# Include routers
+app.include_router(auth.router, prefix="/auth", tags=["Authentication"])
+app.include_router(team.router, prefix="/team", tags=["Team Management"])
+app.include_router(content.router, prefix="/content", tags=["Content Management"])
 
-@app.on_event("shutdown")
-async def shutdown_db_client():
-    await mongodb.close()
-
-# Include API routers
-app.include_router(auth.router, prefix="/auth", tags=["auth"])
-app.include_router(team.router, prefix="/team", tags=["team"])
-app.include_router(content.router, prefix="/content", tags=["content"])
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Super Notes API"}
