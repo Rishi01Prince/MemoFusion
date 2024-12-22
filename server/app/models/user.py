@@ -1,4 +1,4 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, ConfigDict, EmailStr
 from typing import Optional
 from bson import ObjectId
 
@@ -10,7 +10,7 @@ class User(BaseModel):
     is_active: bool = True
     is_superuser: bool = False
 
-    class Config:
-        json_encoders = {
-            ObjectId: str,
-        }
+    model_config = ConfigDict(
+        arbitrary_types_allowed=True,
+        json_encoders={ObjectId: str}
+    )
