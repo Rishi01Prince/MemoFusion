@@ -1,19 +1,27 @@
 import { Metadata } from "next";
+import Link from 'next/link'
+
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
 
 export const metadata: Metadata = {
-  title:
-    "Next.js E-commerce Dashboard | TailAdmin - Next.js Dashboard Template",
-  description: "This is Next.js Home for TailAdmin Dashboard Template",
+  title: "Maya Collab",
+  description: "Maya Collab - Collaborate seamlessly",
 };
 
 export default function Home() {
+  
   return (
-    <>
-      <DefaultLayout>
-        {/* <ECommerce /> */}
-        <div>hello</div>
-      </DefaultLayout>
-    </>
+    <DefaultLayout>
+      <div className="text-center p-4">
+        <h1 className="text-2xl font-bold mb-4">Welcome to Maya Collab</h1>
+        <Link href="/workspace">
+        <button
+          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        >
+          Go to the Workspace
+        </button>
+        </Link>
+      </div>
+    </DefaultLayout>
   );
 }
