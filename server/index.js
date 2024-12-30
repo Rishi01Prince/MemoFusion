@@ -1,7 +1,15 @@
-const dotenv = require('dotenv')
+import dotenv from  'dotenv';
+import app from './app.js';
+
 dotenv.config({path : './config.env'})
 const port = process.env.port | 5000 ;
-const app = require('./app');
+
+const x = process.env.DATABASE_USERNAME;
+console.log(x+ "x");
+
+
+
+
 
 
 app.listen(port, () => {

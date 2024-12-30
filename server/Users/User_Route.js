@@ -3,7 +3,7 @@ const user = Router();
 // const authRoute = require("./auth");
 // const passport = require('./passport');
 import userMethods from './User_Methods.js';
- CreateUser, loginUser, isValidCredentials, getAllUsers  = userMethods;
+ const {CreateUser, loginUser, isValidCredentials, getAllUsers}  = userMethods;
 // user.use(passport.initialize());
 // user.use(passport.session());
 

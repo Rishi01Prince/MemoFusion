@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Rishi Raj",
   "main": "index.js",
+  "type": "module",
   "engines": {
     "node": "18.x"
   },

@@ -1,6 +1,7 @@
 import express, { json } from 'express';
 const app = express();
 import db from './db.js';
+
 import morgan from 'morgan';
 import cors from "cors";
 

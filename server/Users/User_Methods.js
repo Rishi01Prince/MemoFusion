@@ -1,9 +1,11 @@
-const User = require('../models/User');
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
-const validator = require('validator');
-const { validationResult } = require('express-validator');
+import User from '../models/User.js';
+import jwt from "jsonwebtoken";
+import bcrypt from "bcryptjs";
+import validator from "validator";
+import { validationResult } from "express-validator";
+
 const jwtSecret = "MynameisRishiRajandInstant";
+
 
 
 const isValidCredentials = async (req, res, next) => {

@@ -1,10 +1,15 @@
-const mongoose = require('mongoose')
-mongoose.set('strictQuery', true);
+import { set, connect as _connect } from 'mongoose';
+import dotenv from  'dotenv';
+dotenv.config({path : './config.env'})
+
+set('strictQuery', true);
+
+const x = process.env.DATABASE_USERNAME;
 
 const mongoURI = process.env.DATABASE.replace('<DATABASE_USERNAME>' , process.env.DATABASE_USERNAME).replace('<DATABASE_PASSWORD>' , process.env.DATABASE_PASSWORD);
 
 const mongoDB = async () => {
-    await mongoose.connect(mongoURI, {
+    await _connect(mongoURI, {
         useNewUrlParser: true,
         // useCreateIndex: true, 
         // useFindAndModify: false,
@@ -21,4 +26,4 @@ const connect = async (err, result) => {
 }
 
 
-module.exports = mongoDB();
+export default mongoDB();
