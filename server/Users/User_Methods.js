@@ -101,10 +101,10 @@ const loginUser = async (req, res) => {
 
 
 const UserMethods = {
-    isValidCredentials: isValidCredentials,
     CreateUser: CreateUser,
+    isValidCredentials: isValidCredentials,
     loginUser: loginUser,
     getAllUsers : getAllUsers
 };
 
-module.exports = UserMethods;
+export default UserMethods;

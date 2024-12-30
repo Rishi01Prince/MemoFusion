@@ -1,13 +1,13 @@
 const router = require("express").Router();
-const passport = require("passport");
-const jwt = require("jsonwebtoken");
+import { authenticate } from "passport";
+import { sign } from "jsonwebtoken";
 
 // Example secret key, ensure you use a secure key
 const JWT_SECRET = process.env.JWT_SECRET || 'your_jwt_secret_key';
 
 // Generate JWT token for authenticated users
 const generateToken = (user) => {
-    return jwt.sign({ id: user.id, email: user.email }, JWT_SECRET, { expiresIn: '1h' });
+    return sign({ id: user.id, email: user.email }, JWT_SECRET, { expiresIn: '1h' });
 };
 
 router.get("/login/success", (req, res) => {
@@ -31,13 +31,13 @@ router.get("/login/failed", (req, res) => {
     });
 });
 
-router.get('/google', passport.authenticate('google', {
+router.get('/google', authenticate('google', {
     scope: ['profile', 'email'] // Add scopes here
 }));
 
 router.get(
     "/google/callback",
-    passport.authenticate("google", {
+    authenticate("google", {
         failureRedirect: "/login/failed",
     }),
     (req, res) => {
@@ -54,4 +54,4 @@ router.get("/logout", (req, res) => {
     res.redirect(process.env.CLIENT_URL);
 });
 
-module.exports = router;
+export default router;

@@ -1,14 +1,13 @@
-const express = require('express');
+import express, { json } from 'express';
 const app = express();
-const db = require('./db');
-const morgan = require('morgan');
-const cors = require("cors");
+import db from './db.js';
+import morgan from 'morgan';
+import cors from "cors";
 
-const cookieSession = require("cookie-session");
+import cookieSession from "cookie-session";
+import routes from './Controller.js'; 
 
-const routes = require('./Routes'); 
-
-app.use(express.json());
+app.use(json());
 app.use(morgan('dev'));
 
 app.use(
@@ -34,4 +33,4 @@ app.get('/', (req, res) => {
   res.send('You are successfully connected to the app!');
 });
 
-module.exports = app;
+export default app;

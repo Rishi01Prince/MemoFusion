@@ -1,10 +1,11 @@
-const express = require('express')
-const user = express.Router();
-const authRoute = require("./auth");
-const passport = require('./passport');
-const {CreateUser, loginUser , isValidCredentials , getAllUsers} = require('./User_Methods');
-user.use(passport.initialize());
-user.use(passport.session());
+import { Router } from 'express';
+const user = Router();
+// const authRoute = require("./auth");
+// const passport = require('./passport');
+import userMethods from './User_Methods.js';
+ CreateUser, loginUser, isValidCredentials, getAllUsers  = userMethods;
+// user.use(passport.initialize());
+// user.use(passport.session());
 
 user.route('/')
     .get(getAllUsers)
@@ -19,7 +20,7 @@ user
 
     
 
-user.use('/auth' , authRoute)
+// user.use('/auth' , authRoute)
 // '/user/auth/google/callback'
 
-module.exports = user;
+export default user;
