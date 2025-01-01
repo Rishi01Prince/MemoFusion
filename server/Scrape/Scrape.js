@@ -1,37 +1,49 @@
-
-// const express = require('express')
-// const cheerio = require('cheerio');
 import * as cheerio from 'cheerio';
+import axios from 'axios';
 
 const scrape = async (req, res) => {
     const { url } = req.body;
 
-    // Validate the URL
     if (!url || !url.startsWith('http')) {
         return res.status(400).json({ error: 'Invalid URL provided' });
     }
 
     try {
-        // Fetch the HTML content from the URL
+      
         const response = await axios.get(url);
         const html = response.data;
 
-        // Load the HTML into Cheerio
         const $ = cheerio.load(html);
 
-        // Example: Extract the title and meta description
         const title = $('title').text();
         const description = $('meta[name="description"]').attr('content');
 
-        // Return scraped data
+        const headings = {};
+        for (let i = 1; i <= 6; i++) {
+            headings[`h${i}`] = $(`h${i}`).map((_, el) => $(el).text().trim()).get();
+        }
+
+        const paragraphs = $('p').map((_, el) => $(el).text().trim()).get();
+
+        const links = $('a').map((_, el) => ({
+            text: $(el).text().trim(),
+            href: $(el).attr('href'),
+        })).get();
+
+        const images = $('img').map((_, el) => $(el).attr('src')).get();
+
         res.json({
             title: title || 'No title found',
             description: description || 'No description found',
+            headings,
+            paragraphs,
+            links,
+            images,
         });
     } catch (error) {
         console.error('Error scraping the URL:', error.message);
         res.status(500).json({ error: 'Failed to scrape the URL' });
     }
-}
+};
 
 export default scrape;
