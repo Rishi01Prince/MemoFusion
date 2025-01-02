@@ -2,15 +2,18 @@
 
 import { Router } from "express";
 import openai_operation from "./OpenAi.js";
-const {image , completion} = openai_operation;
+const { text , image} = openai_operation;
 const openai= Router();
 
 
 openai
-    .route('/')
-    .get(image)
-    .post(completion);
+    .route('/text')
+    .get(text)
 
+
+openai
+    .route('/image')
+    .get(image)
 
 
 export default openai;
