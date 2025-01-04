@@ -1,26 +1,21 @@
-import { Router } from 'express';
-const user = Router();
-// const authRoute = require("./auth");
-// const passport = require('./passport');
-import userMethods from './User_Methods.js';
- const {CreateUser, loginUser, isValidCredentials, getAllUsers}  = userMethods;
-// user.use(passport.initialize());
-// user.use(passport.session());
+import express from 'express';
+import UserMethods from '../controllers/UserMethods.js';
+import { check } from 'express-validator';
 
-user.route('/')
-    .get(getAllUsers)
+const router = express.Router();
 
-user
-    .route('/login')
-    .post(isValidCredentials, loginUser);
 
-user
-    .route('/createuser')
-    .post(isValidCredentials , CreateUser);
+router.post('/login', UserMethods.isValidCredentials, UserMethods.loginUser); 
 
-    
+router.post('/signup', [
+    check('email', 'Please enter a valid email').isEmail(),
+    check('password', 'Password is required').exists(),
+], UserMethods.CreateUser); 
 
-// user.use('/auth' , authRoute)
-// '/user/auth/google/callback'
 
-export default user;
+router.post('/googleSignIn', UserMethods.googleSignIn);
+
+// Route to fetch all users (for admin or internal use)
+router.get('/users', UserMethods.getAllUsers);
+
+export default router;
