@@ -5,9 +5,9 @@ import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Next.js Profile | Maya Collab - Next.js Dashboard Template",
+  title: "Next.js Profile | MemoFusion - Next.js Dashboard Template",
   description:
-    "This is Next.js Profile page for Maya Collab - Next.js Tailwind CSS Admin Dashboard Template",
+    "This is Next.js Profile page for MemoFusion - Next.js Tailwind CSS Admin Dashboard Template",
 };
 
 const Profile = () => {

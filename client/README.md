@@ -1,20 +1,20 @@
-# Maya Collab Next.js - Free Next.js Tailwind Admin Dashboard Template
+# MemoFusion Next.js - Free Next.js Tailwind Admin Dashboard Template
 
-Maya Collab is a free and open-source admin dashboard template built on **Next.js and Tailwind CSS** providing developers with everything they need to create a feature-rich and data-driven: back-end, dashboard, or admin panel solution for any sort of web project.
+MemoFusion is a free and open-source admin dashboard template built on **Next.js and Tailwind CSS** providing developers with everything they need to create a feature-rich and data-driven: back-end, dashboard, or admin panel solution for any sort of web project.
 
-[![tailwind nextjs admin template](https://github.com/Maya Collab/free-nextjs-admin-dashboard/blob/main/Maya Collab-nextjs.jpg)](https://nextjs-demo.Maya Collab.com/)
+[![tailwind nextjs admin template](https://github.com/MemoFusion/free-nextjs-admin-dashboard/blob/main/MemoFusion-nextjs.jpg)](https://nextjs-demo.MemoFusion.com/)
 
-With Maya Collab Next.js, you get access to all the necessary dashboard UI components, elements, and pages required to build a high-quality and complete dashboard or admin panel. Whether you're building a dashboard or admin panel for a complex web application or a simple website. 
+With MemoFusion Next.js, you get access to all the necessary dashboard UI components, elements, and pages required to build a high-quality and complete dashboard or admin panel. Whether you're building a dashboard or admin panel for a complex web application or a simple website. 
 
-Maya Collab utilizes the powerful features of **Next.js 14** and common features of Next.js such as server-side rendering (SSR), static site generation (SSG), and seamless API route integration. Combined with the advancements of **React 18** and the robustness of **TypeScript**, Maya Collab is the perfect solution to help get your project up and running quickly.
+MemoFusion utilizes the powerful features of **Next.js 14** and common features of Next.js such as server-side rendering (SSR), static site generation (SSG), and seamless API route integration. Combined with the advancements of **React 18** and the robustness of **TypeScript**, MemoFusion is the perfect solution to help get your project up and running quickly.
 
-### [✨ Visit Website](https://Maya Collab.com/)
-### [🚀 PRO Demo](https://nextjs-demo.Maya Collab.com/)
-### [🚀 FREE Demo](https://nextjs-free-demo.Maya Collab.com/)
+### [✨ Visit Website](https://MemoFusion.com/)
+### [🚀 PRO Demo](https://nextjs-demo.MemoFusion.com/)
+### [🚀 FREE Demo](https://nextjs-free-demo.MemoFusion.com/)
 
-### Maya Collab Next.js PRO vs Maya Collab Next.js FREE Comparison 📊
+### MemoFusion Next.js PRO vs MemoFusion Next.js FREE Comparison 📊
 
-#### [Maya Collab Next.js PRO](https://nextjs-demo.Maya Collab.com/)
+#### [MemoFusion Next.js PRO](https://nextjs-demo.MemoFusion.com/)
 - 5 Unique Dashboards: Analytics, Ecommerce, Marketing, and CRM (More will be added)
 - 150+ Dashboard UI Components
 - 200+ Total UI Elements
@@ -23,7 +23,7 @@ Maya Collab utilizes the powerful features of **Next.js 14** and common features
 - Full Figma Design Source - As Shown on Demo
 ___
 
-#### [Maya Collab Next.js FREE](https://free-nextjs-demo.Maya Collab.com/)
+#### [MemoFusion Next.js FREE](https://free-nextjs-demo.MemoFusion.com/)
 - 1 Unique Dashboard
 - 30+ Dashboard UI Components
 - 50+ Total UI Elements 
@@ -33,15 +33,15 @@ ___
 - Figma Design Source - Free Sample
 ___
 
-### [⬇️ Download Now](https://Maya Collab.com/download)
+### [⬇️ Download Now](https://MemoFusion.com/download)
 
-### [⚡ Get PRO Version](https://Maya Collab.com/pricing)
+### [⚡ Get PRO Version](https://MemoFusion.com/pricing)
 
-### [📄 Documentation/Installation](https://Maya Collab.com/docs)
+### [📄 Documentation/Installation](https://MemoFusion.com/docs)
 
-### [🖌️ Maya Collab Figma Free Sample](https://www.figma.com/community/file/1214477970819985778)
+### [🖌️ MemoFusion Figma Free Sample](https://www.figma.com/community/file/1214477970819985778)
 
-### [👉 Maya Collab HTML Version](https://github.com/Maya Collab/Maya Collab-free-tailwind-dashboard-template)
+### [👉 MemoFusion HTML Version](https://github.com/MemoFusion/MemoFusion-free-tailwind-dashboard-template)
 
 
 ## Installation
@@ -74,14 +74,14 @@ yarn dev
 
 
 ## Free Admin Dashboard Template for Next.js Built-with Tailwind CSS, React 18 and TypeScript
-Maya Collab Next.js is a free dashboard template, which uses Tailwind CSS, is a great starting point for dashboard UI. This template uses the Next.js JavaScript framework and the easy-to-use Tailwind CSS framework. The Tailwind CSS and Next.js Dashboard Template comes with ready-made components like navigation menus, charts, tables, and forms. These components can be easily adjusted and added to any Next.js web application.
+MemoFusion Next.js is a free dashboard template, which uses Tailwind CSS, is a great starting point for dashboard UI. This template uses the Next.js JavaScript framework and the easy-to-use Tailwind CSS framework. The Tailwind CSS and Next.js Dashboard Template comes with ready-made components like navigation menus, charts, tables, and forms. These components can be easily adjusted and added to any Next.js web application.
 
-Maya Collab for Next.js provides all essential Next.js + Tailwind CSS UI components that can be copied and pasted directly into your dashboard projects. The range of components includes charts, graphs, navbars, tabs, buttons, cards, tables, profiles, forms, modals, app pages, calendars, web app example templates, and more, all coded for Next.js React and styled using Tailwind CSS.
+MemoFusion for Next.js provides all essential Next.js + Tailwind CSS UI components that can be copied and pasted directly into your dashboard projects. The range of components includes charts, graphs, navbars, tabs, buttons, cards, tables, profiles, forms, modals, app pages, calendars, web app example templates, and more, all coded for Next.js React and styled using Tailwind CSS.
 
-If you're on the hunt for a top-quality Next.js-Tailwind Dashboard, Admin Panel Template, or UI Kit, Maya Collab is the perfect choice for you!
+If you're on the hunt for a top-quality Next.js-Tailwind Dashboard, Admin Panel Template, or UI Kit, MemoFusion is the perfect choice for you!
 
 ### 📄 License
-Maya Collab Next.js Free is 100% free and open-source; feel free to use it with your personal and commercial projects.
+MemoFusion Next.js Free is 100% free and open-source; feel free to use it with your personal and commercial projects.
 
 ### 💜 Support
 If you like the template, please star this repository to inspire the team to create more stuff like this and reach more users like you!
@@ -131,4 +131,4 @@ If you like the template, please star this repository to inspire the team to cre
 
 ### Version 0.1.0 - Initial Release - [Aug 3, 2023]
 
-- Initial release of Maya Collab Next.
+- Initial release of MemoFusion Next.

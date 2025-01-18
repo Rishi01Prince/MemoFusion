@@ -5,9 +5,9 @@ import { authEnvConfig } from '@/app/config/authEnvConfig';
 
 export const authConfig = {
   pages: {
-    signIn: '/login',
-    signOut: '/login',
-    error: '/login',
+    signIn: '/auth/signin',
+    signOut: '/auth/sigin',
+    error: '/auth/signin',
   },
   providers: [
     GoogleProvider({

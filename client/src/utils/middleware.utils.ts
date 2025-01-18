@@ -1,11 +1,11 @@
 import { NextResponse } from 'next/server';
 
 export function isPublicRoute(pathname: string) {
-    return ['/login'].includes(pathname);
+    return ['/auth/signin'].includes(pathname);
 }
 
 export function redirectToLogin(nextUrl: URL) {
-    return NextResponse.redirect(new URL('/login', nextUrl.origin));
+    return NextResponse.redirect(new URL('/auth/signin', nextUrl.origin));
 }
 
 export function redirectToWelcome(nextUrl: URL) {

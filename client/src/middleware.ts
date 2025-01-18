@@ -5,7 +5,8 @@ import {
     redirectToLogin,
     redirectToWelcome,
 } from './utils/middleware.utils';
-import { AuthenticatedNextRequest } from '@/app/types/middleware.types';
+
+import { AuthenticatedNextRequest } from '@/types/middleware.types';
 
 export const config = {
     // https://nextjs.org/docs/app/building-your-application/routing/middleware#matcher
